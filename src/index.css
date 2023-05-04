@@ -128,7 +128,7 @@ a{
   column-gap: 20px;
 }
 .date{
-  
+  gap: 10px;
  
   display: flex;
   flex-direction: column;
@@ -136,16 +136,17 @@ a{
 }
 .location{
 
-
+  gap: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .contact-no{
-
- 
   display: flex;
   flex-direction: column;
+  gap: 10px;
+
   align-items: center;
 }
 .bi-clock{
@@ -159,4 +160,54 @@ a{
 .bi-telephone-outbound-fill{
   color: #00b860;
   font-size: 30px;
+}
+.paragraph{
+   color: gray;
+}
+.round1{
+  position: absolute;
+  top: 900px;
+  z-index: -3;
+  left: -80px;
+}
+.background1{
+  width: 500px;
+}
+.pizza-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 200px auto;
+  column-gap: 150px;
+}
+.pizza-img{
+  width: 600px;
+  /* border-radius: 1000px; */
+  
+}
+.pizza{
+  margin-left: -160px;
+}
+.pizza-text{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.Quality{
+  color: #00b860;
+}
+.Quality-title{
+  line-height: 50px;
+}
+.Quick-Order1{
+  padding: 23px 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: #ff8412;
+  color: white;
+  width: 200px;
+  font-size: large;
+   box-shadow: 0 0 10px rgba(170, 91, 22, 0.774);
+   margin: 10px 0;
 }
