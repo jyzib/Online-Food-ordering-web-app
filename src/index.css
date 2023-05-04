@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  /* padding-top: 80px; */
+  font-family: Arial, Helvetica, sans-serif;
+  position: static;
+  width: 100%;
+  
+}
+.navbar{
+  background-color: #45ffa8a8 ;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: fixed;
+  top: 30px;
+  border-radius: 50px;
+  left: 10%;
+  right: 10%;
+  padding: 10px;
+  z-index: 1000;
+  height: 100px;
+  
+  justify-content: space-between;
+}
+ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+   gap: 40px;
+
+}
+
+a{
+  text-decoration: none;
+  color: rgb(126, 126, 126);
+  /* font-weight: 600; */
+  font-size: larger;
+}
+.nav-right{
+   display: flex;
+   column-gap: 20px;
+  
+}
+.order-now{
+  padding: 23px 40px;
+  border-radius: 40px;
+  margin: 15px;
+  border: none;
+  background-color: #ff8412;
+  color: white;
+  font-size: large;
+
+}
+.home{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  justify-content: space-between;
+  padding-top: 130px;
+
+}
+.home1{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  column-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.leaves{
+  position: absolute;
+  top: 630px;
+  z-index: -2;
+  left: -80px;
+  
+}
+.leaves-img{
+   width: 400px;
+}
+.round{
+  position: absolute;
+   right:600px;
+   top: -100px;
+  height: 100vh;
+  width: 200px;
+  z-index: -1;
+ 
+}
+.background{
+  width: 800px;
+}
+.food-plate{
+  width: 600px;
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+}
+.Quick-Order{
+  padding: 23px 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: #ff8412;
+  color: white;
+  font-size: large;
+   box-shadow: 0 0 10px rgba(170, 91, 22, 0.774);
+   margin: 10px 0;
+}
+.title-dep{
+  margin: 20px 0;
+  line-height: 23px;
+}
+.title{
+  font-size: 53px;
+}
+.time{
+  align-items: center;
+  justify-content: space-around;
+  width: 800px;
+  display: flex;
+  margin: auto;
+  column-gap: 20px;
+}
+.date{
+  
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.location{
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-no{
+
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bi-clock{
+  font-size: 30px;
+  color: #00b860;
+}
+.bi-geo-alt-fill{
+  color: #00b860;
+  font-size: 30px;
+}
+.bi-telephone-outbound-fill{
+  color: #00b860;
+  font-size: 30px;
+}
