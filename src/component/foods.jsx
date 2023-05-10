@@ -5,6 +5,7 @@ import { Alldata } from '../context'
 import { Link } from 'react-router-dom'
 const foods = () => {
  const {data,setData,cartitem,setCartitem} = useContext(Alldata)
+ const [remove,setRemove] = useState(true)
 
    function ratingg(i){
     let x = Number(Math.round(i))
@@ -37,9 +38,10 @@ const foods = () => {
     return rating
    }
 const handelcart = (x)=>{
-   setCartitem([x])
+  
    setCartitem([...cartitem,x])
    console.log(cartitem)    
+   setRemove(!remove)
    
 }
 
@@ -67,7 +69,7 @@ const handelcart = (x)=>{
                     <p title={e.info.rating.rating_subtitle} >{ratingg(e.info.rating.rating_text) } </p>
                     
                    
-                    <button onClick={()=>handelcart(e)} className='addtocart' >Add to cart</button>
+                    <button onClick={()=>handelcart(e)} className='addtocart' >{remove?'Add to cart':'Remove from cart'}</button>
                 </div>
           
             </div>

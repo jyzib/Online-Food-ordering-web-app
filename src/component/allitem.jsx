@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useContext,useState,useEffect } from 'react'
 import { Alldata } from '../context'
 const allitem = () => {
-    const {data,SetData} = useContext(Alldata)
+    const {data,setCartitem,cartitem} = useContext(Alldata)
     const [search,setsearch] = useState('')
     const [item,setitem] = useState(data)
 
@@ -50,7 +50,10 @@ useEffect(()=>{
         return rating
        }
 
+const handelcart = (e)=>{
+    setCartitem([...cartitem,e])
 
+}
   return (
     <div className='allcads' >
          
@@ -70,6 +73,7 @@ useEffect(()=>{
           <div className="card-image">
           <img className='card-img' src={e.info.image.url} alt="" />
           </div>
+          </Link>
           <div className="text-bottom">
               <div className="text-mrp">
               <h3 className='food-title' >{e.info.name}</h3>
@@ -80,12 +84,12 @@ useEffect(()=>{
               <p>Address: {e.info.locality.address}</p>
                   <p title={e.info.rating.rating_subtitle} >{ratingg(e.info.rating.rating_text) }</p>
                  
-                  <button className='addtocart' >Add to cart</button>
+                  <button onClick={()=>handelcart(e)} className='addtocart' >Add to cart</button>
               </div>
         
           </div>
          
-          </Link>
+        
 
           </div>
       )

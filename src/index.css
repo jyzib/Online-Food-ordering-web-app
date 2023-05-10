@@ -483,7 +483,15 @@ input{
 }
 .cart-item{
   display: flex;
+  padding: 5px;
   column-gap: 10px;
+   border-radius: 10px;
+  transition: 0.3s;
+}
+.cart-item:hover{
+  background-color: #00b85f4e;
+  backdrop-filter: blur(10px);
+ 
 }
 .cart-image{
   width: 100px;

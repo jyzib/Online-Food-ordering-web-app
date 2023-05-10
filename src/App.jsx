@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Navbar from './component/navbar'
+import Card from './component/card'
 import Allitem from './component/allitem'
 import Herosection from './component/herosection'
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Navbar/>}>
        <Route index element={<Herosection/>} />
-       <Route path='/:id' element={'card'}/>
+       <Route path='/:id' element={<Card/>}/>
        <Route path='/foods' element={<Allitem/>} />
           <Route path='/foods/:id' element={'one'}/>
         
