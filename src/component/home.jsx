@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Foods from './foods'
 const home = () => {
   return (
     <div className='home' >
+      <div className="div">
         <div className="home1">
         <div className="round">
       <img className='background' src="img/background.png" alt="" />
@@ -22,18 +23,18 @@ const home = () => {
         <div className="time">
             <div className="date">
             <i className="bi bi-clock"></i>
-            <h3>Mon - Sat(10AM - 8PM)</h3>
+            <h3 className='title-icon-text' >Mon - Sat(10AM - 8PM)</h3>
             <p className='paragraph' >Available Hours</p>
             </div>
             <div className="location">
             <i className="bi bi-geo-alt-fill"></i>
-            <h3>Haryana, Faridabad</h3>
+            <h3 className='title-icon-text' >Haryana, Faridabad</h3>
             <p className='paragraph' >Our Location</p>
 
             </div>
             <div className="contact-no">
             <i className="bi bi-telephone-outbound-fill"></i>
-            <h3>91 8920353238</h3>
+            <h3 className='title-icon-text' >91 8920353238</h3>
             <p className='paragraph' >Call us</p>
 
             </div>
@@ -53,6 +54,8 @@ const home = () => {
         </div>
        
       </div>
+      </div>
+      <Foods/>
     </div>
   )
 }
