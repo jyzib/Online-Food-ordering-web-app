@@ -1,5 +1,6 @@
 import React from 'react'
 import Foods from './foods'
+import { Link } from 'react-router-dom'
 const home = () => {
   return (
     <div className='home' >
@@ -11,7 +12,7 @@ const home = () => {
       <div className="home-left">
         <h1 className='title' >We are ready to deliver your favorite food items</h1>
        <p className='title-dep' >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quia, nihil aspernatur libero, excepturi nobis facilis neque aliquam minima molestias, amet veritatis dicta praesentium error maiores consequuntur est eius quidem?</p>
-       <button className='Quick-Order' >Quick Order  <i className="bi bi-arrow-right"></i> </button>
+       <Link to={'/foods'} ><button className='Quick-Order' >Quick Order  <i className="bi bi-arrow-right"></i> </button></Link> 
       </div>
       <div className="home-rigth">
         <img className='food-plate' src="img/food-plate.png" alt="" />

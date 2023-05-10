@@ -1,9 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext,useState,useEffect } from 'react'
 import { Alldata } from '../context'
 const allitem = () => {
     const {data,SetData} = useContext(Alldata)
+    const [search,setsearch] = useState('')
+    const [item,setitem] = useState(data)
+
+useEffect(()=>{
+    const filter = data.filter((e)=>{
+       if((e.info.name).toLowerCase().includes(search.toLowerCase())||(e.info.locality.address).toLowerCase().includes(search.toLowerCase())  ){
+        return e
+       }
+    })
+    setitem(filter)
+  console.log(search)
+},[search])
+
+
+
     function ratingg(i){
         let x = Number(Math.floor(i))
         let rating = ''
@@ -34,12 +49,21 @@ const allitem = () => {
         }
         return rating
        }
+
+
   return (
+    <div className='allcads' >
+         
+  <input onChange={(e)=>setsearch(e.target.value)} type="text" name="" id=""  placeholder='Search for restaurant, cuisine or a dish'/>
+
+{item.length == 0 ?'empty':''}
     <div className='cards-box' >
-    {data.map((e)=>{
+      
+    {item.map((e)=>{
      
 
        return (
+        
          
        <div key={e.id} className="card">
            <Link to={`${e.info.name}`} >
@@ -52,7 +76,8 @@ const allitem = () => {
               <h3 className='food-title' >{e.info.cfo.text}</h3>
               </div>
               <div className="btn">
-              <p>{e.info.locality.address}</p>
+              
+              <p>Address: {e.info.locality.address}</p>
                   <p title={e.info.rating.rating_subtitle} >{ratingg(e.info.rating.rating_text) }</p>
                  
                   <button className='addtocart' >Add to cart</button>
@@ -66,6 +91,7 @@ const allitem = () => {
       )
     })}
    
+  </div>
   </div>
   )
 }

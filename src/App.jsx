@@ -15,9 +15,9 @@ function App() {
     <Routes>
       <Route path='/' element={<Navbar/>}>
        <Route index element={<Herosection/>} />
-       <Route path=':id' element={'card'}/>
-       <Route path='foods' element={<Allitem/>} />
-          <Route path='foods/:id' element={'one'}/>
+       <Route path='/:id' element={'card'}/>
+       <Route path='/foods' element={<Allitem/>} />
+          <Route path='/foods/:id' element={'one'}/>
         
     
      

@@ -4,19 +4,8 @@ import { useContext } from 'react'
 import { Alldata } from '../context'
 import { Link } from 'react-router-dom'
 const foods = () => {
- const {data,setData} = useContext(Alldata)
+ const {data,setData,cartitem,setCartitem} = useContext(Alldata)
 
-   
-    // useEffect(()=>{
-    //     const datafetch = async ()=>{
-    //         const responce = await fetch('http://localhost:3500/restrunt')
-    //         const alldata = await responce.json()
-    //         console.log(alldata.slice(1))
-    //         setData(alldata)
-    //      } 
-    //      datafetch()
-
-    // },[])
    function ratingg(i){
     let x = Number(Math.round(i))
     let rating = ''
@@ -47,6 +36,13 @@ const foods = () => {
     }
     return rating
    }
+const handelcart = (x)=>{
+   setCartitem([x])
+   setCartitem([...cartitem,x])
+   console.log(cartitem)    
+   
+}
+
   return (
     <div className='cards-box' >
       {data.slice(2,8).map((e)=>{
@@ -59,21 +55,24 @@ const foods = () => {
             <div className="card-image">
             <img className='card-img' src={e.info.image.url} alt="" />
             </div>
+              </Link>
             <div className="text-bottom">
                 <div className="text-mrp">
                 <h3 className='food-title' >{e.info.name}</h3>
                 <h3 className='food-title' >{e.info.cfo.text}</h3>
                 </div>
+              
                 <div className="btn">
                 <p>{e.info.locality.address}</p>
                     <p title={e.info.rating.rating_subtitle} >{ratingg(e.info.rating.rating_text) } </p>
+                    
                    
-                    <button className='addtocart' >Add to cart</button>
+                    <button onClick={()=>handelcart(e)} className='addtocart' >Add to cart</button>
                 </div>
           
             </div>
            
-            </Link>
+           
 
             </div>
         )

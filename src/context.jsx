@@ -3,6 +3,7 @@ import { createContext,useState,useEffect } from 'react'
 export const Alldata = createContext()
 const Context = ({children}) => {
 const [data,setData] = useState([])
+const [cartitem,setCartitem] = useState([])
     useEffect(()=>{
         const datafetch = async ()=>{
             const responce = await fetch('http://localhost:3500/restrunt')
@@ -16,7 +17,7 @@ const [data,setData] = useState([])
     
   return (
     <div >
-        <Alldata.Provider value={{data,setData}} >
+        <Alldata.Provider value={{data,setData,cartitem,setCartitem}} >
           {children}
         </Alldata.Provider>
       

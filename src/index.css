@@ -438,6 +438,26 @@ a{
   border-radius: 10px;
   transition: 0.2s;
 }
+input{
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 20px;
+  border: none;
+ 
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.319);
+
+}
+.allcads{
+  margin-top: 150px;
+}
+.allcads{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
 .food-title{
   color: black;
 }
@@ -445,4 +465,49 @@ a{
   border: 2px solid #00B860;
   background-color: #00B860;
   color: white ;
+}
+.carttoggle{
+  position: absolute;
+  width: 290px;
+  background-color: rgba(255, 255, 255, 0.91);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  right: -80px;  
+  padding: 17px;
+  min-height: 100px;
+  border-radius: 20px;
+}
+.mycart{
+  position: relative;
+}
+.cart-item{
+  display: flex;
+  column-gap: 10px;
+}
+.cart-image{
+  width: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+.cart-img{
+  object-fit: cover;
+  
+  width: 100%;
+}
+.totalitem{
+  position: absolute ;
+  top: -15px;
+  background-color: #ff8412;
+ 
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: white;
+  right: -10px;
 }
