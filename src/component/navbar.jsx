@@ -18,7 +18,7 @@ const navbar = () => {
   return (
     <> <div className='navbar'>
        <div className="logo-left">
-        <h3>logo</h3>
+        <img className='logo' src="img/log.png" alt="" />
        </div>
        <div className="nav-right">
            <ul>

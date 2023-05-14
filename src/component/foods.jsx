@@ -46,7 +46,14 @@ const handelcart = (x)=>{
 }
 
   return (
-    <div className='cards-box' >
+    <> 
+      <div className="service-text">
+      <h2 className='Quality' >Foods</h2>
+      <h1 className='Quality-title' >Expolere Our Best Foods </h1>
+      <p className='service-dip' >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam earum quos nesciunt nam iure? Ducimus deleniti quidem consequuntur, nesciunt sint qui tempora, officiis, voluptas ipsum doloribus aliquam.</p>
+      </div>
+    
+       <div className='cards-box' >
       {data.slice(2,8).map((e)=>{
        
 
@@ -69,7 +76,7 @@ const handelcart = (x)=>{
                     <p title={e.info.rating.rating_subtitle} >{ratingg(e.info.rating.rating_text) } </p>
                     
                    
-                    <button onClick={()=>handelcart(e)} className='addtocart' >{remove?'Add to cart':'Remove from cart'}</button>
+                    <button onClick={()=>handelcart(e)} className='addtocart' >Add to cart</button>
                 </div>
           
             </div>
@@ -79,8 +86,12 @@ const handelcart = (x)=>{
             </div>
         )
       })}
-     
+    
     </div>
+    <Link to={'/foods'} ><button className='load-more' >Load more  <i className="bi bi-arrow-right"></i> </button></Link> 
+
+    </>
+
   )
 }
 

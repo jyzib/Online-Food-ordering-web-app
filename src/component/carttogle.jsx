@@ -3,10 +3,17 @@ import { useContext } from 'react'
 import { Alldata } from '../context'
 const carttogle = () => {
     const {cartitem} = useContext(Alldata)
-
+  
   return (
     <div className='carttoggle' >
-      {cartitem.length==0?'empty':''}
+      {cartitem.length==0?
+      <div className='cart-empty' >      <img className='cartisempty' src="img/cart.svg" alt="" />
+              <p>Empty</p>
+      </div>
+
+      
+      :
+      ''}
       {cartitem.map((e,i)=>{
          return (
          <div key={i} className="cart-item">

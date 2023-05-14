@@ -1,6 +1,8 @@
 import React from 'react'
 import Foods from './foods'
 import { Link } from 'react-router-dom'
+import Ourservice from './ourservice'
+import Chatbox from './chatbox'
 const home = () => {
   return (
     <div className='home' >
@@ -56,6 +58,8 @@ const home = () => {
        
       </div>
       </div>
+      <Chatbox/>
+      <Ourservice/>
       <Foods/>
     </div>
   )

@@ -16,17 +16,20 @@ const card = () => {
   }
 console.log(onecartitem)
   return (
-    <div>
+    <div className='singlecart' >
       {onecartitem.map((e,i)=>{
         return(
-            <div key={i} className="">
-         <img src={e.info.image.url} alt="" />
+            <div key={i} className="single-box">
+         <img className='singlecart-img' src={e.info.image.url} alt="" />
+         <h2>{e.info.name}</h2>
+         <p>{e.info.cfo.text}</p>
+         <p>{e.info.locality.address}</p>
          {e.info.cuisine.map((m)=>{
             return (
                 <h3>{m.name}</h3>
             )
          })}
-         <button onClick={()=>handelclick(e)} >add to cart</button>
+         <button className='addtocart' onClick={()=>handelclick(e)} >add to cart</button>
             </div>
         )
       })}
